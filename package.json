@@ -28,7 +28,8 @@
     "cy:base-and-regression": "npm run cy:base && npm run cy:regression",
     "cy:open": "visualRegressionLogger=true cypress open --e2e -b chrome -C cypress.base.config.ts",
     "cy:base": "cypress run -C cypress.base.config.ts",
-    "cy:regression": "cypress run -C cypress.regression.config.ts"
+    "cy:regression": "cypress run -C cypress.regression.config.ts",
+    "test": "echo 'i love you'"
   },
   "prettier": {
     "printWidth": 120,

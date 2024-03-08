@@ -12,7 +12,7 @@
     "outDir": "dist",
     "rootDir": "./src",
     "useDefineForClassFields": true,
-    "types": ["node", "vitest/globals", "cypress"],
+    "types": ["node", "cypress"],
     "resolveJsonModule": true,
     "isolatedModules": true,
     "strictNullChecks": true,

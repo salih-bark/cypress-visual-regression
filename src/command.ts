@@ -71,7 +71,8 @@ function addCompareSnapshotCommand(screenshotOptions?: ScreenshotOptions): void 
         }
       } else if (typeof commandOptions === 'number') {
         errorThreshold = commandOptions
-      } else if (screenshotOptions && screenshotOptions.errorThreshold !== undefined) {
+        // eslint-disable-next-line @typescript-eslint/prefer-optional-chain
+      } else if (screenshotOptions != null && screenshotOptions.errorThreshold !== undefined) {
         errorThreshold = screenshotOptions.errorThreshold
       }
 
@@ -127,7 +128,8 @@ function prepareOptions(
     failSilently: Cypress.env('visualRegressionFailSilently')
   }
 
-  if (screenshotOptions && screenshotOptions.failSilently !== undefined) {
+  // eslint-disable-next-line @typescript-eslint/prefer-optional-chain
+  if (screenshotOptions != null && screenshotOptions.failSilently !== undefined) {
     options.failSilently = screenshotOptions.failSilently
   } else if (Cypress.env('visualRegressionFailSilently') !== undefined) {
     options.failSilently = Cypress.env('visualRegressionFailSilently')

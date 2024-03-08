@@ -4,7 +4,7 @@
     "module": "ES6",
     "target": "es5",
     "lib": ["es5", "dom"],
-    "types": ["node", "vitest/globals", "cypress"],
+    "types": ["node", "cypress"],
     "strictNullChecks": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
