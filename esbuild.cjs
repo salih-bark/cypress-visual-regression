@@ -10,7 +10,7 @@ esbuild
     treeShaking: true,
     platform: 'node',
     format: 'cjs',
-    target: 'node18',
+    target: 'node16',
     external: ['require', 'fs', 'path'],
     plugins: [nodeExternalsPlugin()]
   })
