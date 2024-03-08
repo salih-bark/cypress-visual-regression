@@ -71,7 +71,7 @@ function addCompareSnapshotCommand(screenshotOptions?: ScreenshotOptions): void 
         }
       } else if (typeof commandOptions === 'number') {
         errorThreshold = commandOptions
-      } else if (screenshotOptions?.errorThreshold !== undefined) {
+      } else if (screenshotOptions && screenshotOptions.errorThreshold !== undefined) {
         errorThreshold = screenshotOptions.errorThreshold
       }
 
@@ -127,7 +127,7 @@ function prepareOptions(
     failSilently: Cypress.env('visualRegressionFailSilently')
   }
 
-  if (screenshotOptions?.failSilently !== undefined) {
+  if (screenshotOptions && screenshotOptions.failSilently !== undefined) {
     options.failSilently = screenshotOptions.failSilently
   } else if (Cypress.env('visualRegressionFailSilently') !== undefined) {
     options.failSilently = Cypress.env('visualRegressionFailSilently')
